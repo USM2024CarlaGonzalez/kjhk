@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+.toggle-view-btn {
+  background-color: #f18039; /* Naranja para que combine con el diseño */
+  color: white;
+  border: none;
+  padding: 3px 6px; /* Reduce el tamaño del botón */
+  font-size: 10px; /* Hace el texto más pequeño */
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaciado entre icono y texto */
+  margin: 3px auto; /* Centra el botón */
+  width: fit-content; /* Ajusta el ancho al contenido */
+  border-radius: 0px;
+}
+
+.toggle-view-btn:hover {
+  background-color: #d5692b;
+}
+.container-with-black-card {
+  display: flex;
+  align-items: stretch; /* ambas tarjetas tengan la misma altura */
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.black-card {
+  background-color: #383231;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 316px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  height: auto; 
+  max-height: 100%; /* Evita que sea más grande de lo necesario */
+}
+
+.black-card p {
+  font-size: 12px;
+  margin: 3px 0;
+}
+.black-card-container {
+  margin-left: 20px; /* Pequeño espacio entre la tarjeta principal y la tarjeta negra */
+  margin-top: 0; /* Evita que se empuje hacia abajo */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.black-card-grid {
+  display: grid;
+  gap: 8px; /* Espacio reducido entre elementos */
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Que se ajuste al contenedor */
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 🔹 Si hay más de 6 elementos → 3 columnas */
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Estilos para cada tarjeta dentro de la cuadrícula */
+.black-card-item {
+  color: white;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  height: 140px; /* Aumentamos la altura para dar más espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaciamos los elementos */
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 25px; /* Más espacio para la línea */
+}
+
+.black-card-item::after {
+  content: "";
+  position: absolute;
+  bottom: 5px; /* Ajustamos la separación de la línea */
+  left: 10%;
+  width: 80%; /* La línea no cubre todo el ancho */
+  height: 2px; /* Grosor de la línea */
+  background-color: white;
+}
+
+.black-card-item p {
+  font-size: 10px; /* Reduce el tamaño del texto */
+  margin: 2px 0; /* Reduce el espacio entre líneas */
+}
+
+.black-card-item .text-xl {
+  font-size: 12px; /* Reduce el tamaño del número y la letra */
+}
+
+
+.container-with-black-card {
+  display: flex;
+  align-items: stretch; /* Ambos contenedores tendrán la misma altura */
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.vertical-text {
+  display: inline-block;
+  writing-mode:vertical-rl ;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  position: absolute;
+  right: 0px; 
+  top: 40px; /* diferencia de donde termina la tarjeta  */
+  font-size: 10px !important;  /* Reduce el tamaño del texto */
+  width: 15px; /* Reduce el ancho del contenedor */
+  padding: 1px; /* Reduce el padding */
+
+}
+
+
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  min-height: 100h;
+  margin-bottom: 20px; /* Elimina el margen inferior */
+  padding-bottom: 0; /* Asegura que no haya espacio interno */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 2px; /* Espaciado interno */
+  width: 350px; /* Ancho fijo */
+  margin: 0px auto 0px 0px; /* Centrado en la página */
+  padding-top: 20px;
+}
+/* Encabezado */
+.header {
+  background-color: #f18039; /* Color de fondo naranja */
+  color: white; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  padding: 20px; /* Espaciado interno */
+  border-top-left-radius: 18px; /* Bordes superiores redondeados */
+  border-top-right-radius: 18px;
+  margin: 0;
+  padding: 0;
+}
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "myriad-pro", sans-serif;
+}
+
+.black-box {
+  background-color: #383231; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 3px; /* Espaciado interno */
+  text-align: left; /* iz */
+  align-items: center ;
+  margin-top: 10px; /* Espaciado superior */
+}
+.inline-text1 {
+  font-size: 11px !important; /* Ajusta según tu diseño */
+  font-style: italic;
+  font-weight: bold;
+}
+.inline-text2 {
+  font-weight: bold;
+  font-family:sans-serif;
+}
+.text-container {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+  gap: 5px; /* Espacio entre "Entre" y la descripción */
+}
+.bus-stop-text {
+  font-size: 10px !important;
+  margin: 0px !important; /* Eliminar margen */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  align-items: center;
+}
+.header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+/* Ícono del autobús */
+.bus-icon-container {
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  margin-bottom: 15px; /* Espaciado inferior */
+  position: relative;
+}
+
+.bus-icon {
+  width: 110px; /* Ancho del ícono */
+  height: auto; /* Mantiene la proporción */
+}
+
+/* Cuadrícula */
+.grid-container {
+  display: grid;
+  gap: 1.8px; /* linea negra grosor */
+  background-color: #383231;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.grid-container.two-rows {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-container.three-rows {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Tarjetas son las lineas que separan las micros */
+.card {
+  margin: 10; /* Sin márgenes externos */
+  padding: 0; /* Sin padding interno */
+  background-color: white; /* Fondo blanco */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que los elementos se distribuyan */
+  align-items: center;
+  height: 100%; /* Ocupa toda la altura asignada */
+  
+}
+
+.card .top-section {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+
+}
+
+.card .top-section .label {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  color: white; /* Texto blanco */
+  
+}
+.black-card-item span {
+    padding: 4px 5px; /* Espaciado interno */
+    color: white; /* Texto en blanco */
+    font-weight: bold; /* Negrita */
+    font-size: 0.875rem; /* Tamaño similar a text-sm */
+    border-radius: 9px; /* Bordes completamente redondeados */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra ligera */
+    transition: transform 0.2s ease-in-out; /* Animación suave */
+}
+
+.card .time {
+  font-size: 12px;
+  color: gray;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 2px 5px; /* Espaciado interno para mejor legibilidad */
+}
+
+.card .description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white; /* Texto blanco */
+  background-color: w; /* Ajustado dinámicamente */
+  width: 100%; /* Asegura que ocupe todo el ancho de la tarjeta */
+  height: 30px; /* Fija la altura */
+  text-align: center; /* Centra el texto */
+  margin: 0; /* Elimina cualquier margen */
+  padding: 10; /* Elimina padding */
+  border-radius: 0; /* Asegura que no haya bordes redondeados */
+}
+
+
+/* Pie de página */
+.footer {
+  padding-bottom: 20px;
+  margin-top: auto;
+  background-color: #383231;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; 
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: 10; /* Elimina márgenes */
+  margin-bottom: 20px;
+}
+
+.footer-logo-left img {
+  width: 90px; /* Tamaño del logo izquierdo */
+  height: auto; /* Mantiene la proporción */
+}
+
+.footer-logo-right img {
+  width: 70px; /* Tamaño del logo derecho */
+  height: auto; /* Mantiene la proporción */
+}
+
+.footer-content {
+  text-align: center; /* Centrar texto */
+  font-size: 14px;
+  flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+  margin: 0 20px; /* Espaciado horizontal del texto */
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer strong {
+  font-weight: bold;
+}
+
+/* Logos de patrocinadores */
+.sponsors {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-wrap: wrap; /* Permite que los logos se acomoden en varias líneas si es necesario */
+  gap: 17px; /* Agrega espacio entre logos */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  padding-top: 20px;
+  
+}
+
+.sponsors img {
+  width: 70px; /* Ancho fijo */
+  height: auto; /* Mantiene la proporción */
+  max-height: 70px; /* Altura máxima */
+  object-fit: contain; /* Ajusta la imagen al contenedor */
+  margin: 0px; /* Espaciado alrededor de los logos */
+}
+
+body {
+  background-color:  #312e2e;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f18039 !important;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #f18039;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact ;
+    print-color-adjust: exact ;
+    
+  }
+}
+
+.bus-back-container {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.bus-back-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  position: relative;
+}
+
+.bus-back-card {
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid #444;
+}
+
+.bus-back-number {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  margin: auto;
+}
+
+.bus-back-label {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: white;
+  margin-top: 5px;
+}
+
+.bus-back-name {
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.bus-back-info {
+  color: #bbb;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.bus-back-connector {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #3a9efb;
+  top: 50%;
+  right: -20px;
+}
+
+
+.button-container {
+  text-align: center; /* Centrar el botón */
+  margin-top: 20px ;  /* Espacio entre la tarjeta y el botón */
+}
+
+.print-button {
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  gap: 100px;
+}
+ 
+
+
+.print-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.print-button:active {
+  background-color: #1c5985;
+  transform: scale(0.95);
+}
+@media print {
+  /* Para cuando imprima no salga el tiempo lo demas es para que no quede espacio en blanco  */
+  .container{
+    page-break-before: always;
+    margin-left: 10px;
+  }
+  @page {
+    margin: 0;
+  }
+  body {
+      -webkit-print-color-adjust: exact;
+  }
+  .time {
+    display: none ;
+    height: 0 ;
+    width: 0 ;
+    margin: 0 ;
+    padding: 0 ;
+    visibility: hidden;
+    overflow: hidden ;
+  }
+  .print-button {
+    display: none;
+  }
+  .toggle-black-card-btn {
+    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .card .top-section {
+    margin-bottom: 0 ;
+    padding-bottom: 0 ;
+  }
+  /* Ajusta la tarjeta para que el contenido se reorganice bien */
+  .card {
+    height: auto ;
+    min-height: 85px ;
+  
+  }
+  .black-card{
+    page-break-before: always;
+  }
+
+  .black-card-container{
+    margin-left: 345px !important;
+    margin-top: -2120px ;
+    
+  }
+  section.sponsors {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  /* Si la cuadrícula tiene espacio vacío, ajustar */
+  .grid-container {
+    grid-auto-rows: auto;
+    
+  }
+
+  /* Si el espacio sigue apareciendo, forzar la reestructuración */
+  .grid-container, .flex-container {
+    align-items: flex-start ;
+    justify-content: flex-start ;
+    
+  }
+  
+  /* Si hay un contenedor extra generando espacio, ocúltalo */
+  .hidden, .empty-space {
+    display: none;
+    height: 0 ;
+    margin: 0 ;
+  }
+
+  /* Ajustar el margen superior del contenido */
+  .main-content {
+    margin-top: 0 ;
+    padding-top: 0 ;
+  }
+
+  /* Eliminar márgenes adicionales en la impresión */
+  body {
+    margin: 0 ;
+    padding: 0 ;
+    background-color:  #312e2e;
+  }
+  
+  .bus-icon {
+    width: 200px; /* Ancho del ícono */
+    height: auto; /* Mantiene la proporción */
+    
+  }
+}
